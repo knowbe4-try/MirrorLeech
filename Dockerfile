@@ -1,6 +1,5 @@
-FROM anasty17/mltb:latest
-# FROM anasty17/mltb-oracle:latest
-RUN apt install mediainfo -y
+FROM priiiiyo/mega-sdk-python:latest
+
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
@@ -9,4 +8,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["bash", "start.sh"]
+CMD ["bash","start.sh"]
